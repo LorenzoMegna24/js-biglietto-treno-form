@@ -30,27 +30,35 @@
   console.log(nomePasseggero);
   let eta = document.getElementById('eta').value;
   console.log(eta); 
-  let chilometri = document.getElementById('chilometri').value; 
+  let chilometri = parseFloat(document.getElementById('chilometri').value); 
   const prezoalkm = 0.21
 
   let prezzo = chilometri * prezoalkm;
   console.log(prezzo);
+  let tipoBiglietto
 
   if( eta == 2 ){
     let prezzoMinore = prezzo*0.8;
     document.getElementById("prezzoFinale").innerHTML = prezzoMinore.toFixed(2) + '€';
+    tipoBiglietto = "Minorenne"
 
+    console.log(tipoBiglietto);
     console.log(prezzo*0.8);
 
   }else if( eta == 3 ){
     let prezzoOver = prezzo*0.6;
     document.getElementById("prezzoFinale").innerHTML = prezzoOver.toFixed(2) + '€';
+    tipoBiglietto = "Over 65"
 
+    console.log(tipoBiglietto);
     console.log(prezzo*0.6);
   }else{
     document.getElementById("prezzoFinale").innerHTML = prezzo.toFixed(2) + '€';
+    tipoBiglietto = "Maggiorenne"
+
+    console.log(tipoBiglietto);
     console.log(prezzo);
   }
   document.getElementById("nomePasseggero").innerHTML = nomePasseggero
-  document.getElementById("topologiaBiglietto").innerHTML = eta
+  document.getElementById("tipologiaBiglietto").innerHTML = tipoBiglietto
  }
