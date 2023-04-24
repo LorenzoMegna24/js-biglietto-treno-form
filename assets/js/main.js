@@ -40,7 +40,7 @@
   if( eta == 2 ){
     let prezzoMinore = prezzo*0.8;
     document.getElementById("prezzoFinale").innerHTML = prezzoMinore.toFixed(2) + '€';
-    tipoBiglietto = "Minorenne"
+    tipoBiglietto = "Ridotto"
 
     console.log(tipoBiglietto);
     console.log(prezzo*0.8);
@@ -54,7 +54,7 @@
     console.log(prezzo*0.6);
   }else{
     document.getElementById("prezzoFinale").innerHTML = prezzo.toFixed(2) + '€';
-    tipoBiglietto = "Maggiorenne"
+    tipoBiglietto = "Intero"
 
     console.log(tipoBiglietto);
     console.log(prezzo);

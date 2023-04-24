@@ -14,7 +14,7 @@
         <img src="assets/img/trenord.png" alt="">
       </div>
       <div class="card">
-        <h3 class="card-header text-uppercase">clacola il prezzo del tuo biglietto</h3>
+        <h3 class="card-header text-uppercase">calcola il prezzo del tuo biglietto</h3>
         <div class="card-body">
           <div class="d-flex justify-content-around align-items-center mt-2">
             <div class="mb-3">
@@ -24,19 +24,20 @@
             <div class="mb-3">
               <label class="mb-2" for="eta">Quanti anni hai?</label>
               <select class="form-select bg-success-subtle text-center" id="eta" aria-label="Default select example">
-                <option selected value="1">Maggiorenne</option>
-                <option value="2">Minorenne</option>
+                <option selected value="1">Intero</option>
+                <option value="2">Ridotto</option>
                 <option value="3">Over 65</option>
               </select>
             </div>
             <div class="mb-3">
               <label for="chilometri" class="form-label">Quanti chilometri vuoi fare?</label>
-              <input type="text" placeholder="300" class="form-control bg-success-subtle" id="chilometri">
+              <input type="number" step="0.1" placeholder="300" class="form-control bg-success-subtle" id="chilometri">
             </div>
           </div>
       </div>
       </div>
       <button type="submit" class="btn btn-success mt-3" onclick="prezzoBiglietto()">Calcola</button>
+      <button type="submit" class="btn btn-success mt-3"><a href="#" class="text-decoration-none text-light">Annulla</a></button>
       <div class="card mt-5 pb-2">
         <h3 class="card-header text-uppercase">dettaglio biglietto</h3>
         <div class="card-body">
